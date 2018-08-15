@@ -21,7 +21,8 @@ var port = process.env.PORT || 2500;
 //========CONFIGURATION=============
 mongoose.Promise = global.Promise;
 //mongoose.connect("mongodb://localhost:27017/yelpcamp_v11",{useNewUrlParser:true});
-mongoose.connect("mongodb://dheerajahuja:A123456a#@ds219672.mlab.com:19672/yelpcampdheeraj",{useNewUrlParser:true});
+//mongoose.connect("mongodb://dheerajahuja:A123456a#@ds219672.mlab.com:19672/yelpcampdheeraj",{useNewUrlParser:true});
+mongoose.connect(process.env.DATABASEURL,{ useNewUrlParser: true });
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
